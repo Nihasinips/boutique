@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boutique</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    /*@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;1,200&family=Quicksand&display=swap');*/
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,200&family=Quicksand&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+#navbar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: .5rem 5rem;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
+    background: black;
+}
+.navbar .navbar-brand{
+    font-size: 25px;
+    font-weight: 800;
+    color: crimson !important;
+}
+#navbarSupportedContent a{
+    color: white;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+}
+#navbarSupportedContent a:hover{
+    border-bottom: 1.5px solid crimson;
+}
+#navbarSupportedContent button{
+    border-radius: 20px;
+    color: crimson;
+    font-size: 15px;
+    border-color: crimson;
+    font-weight: 700;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e5e5;
+}
+#sarre img{
+    width: 200px;
+    height: 200px;
+}
+#sarre h5{
+    font-weight: 700;
+}
+#sarre p{
+    font-weight: 700;
+}
+.card{
+    width: 200px;
+    border: none !important;
+    box-shadow:  15px 20px 20px rgba(0,0,0,.3),
+                 inset 4px 4px 10px white;
+    border-radius: 20px !important;
+    overflow: hidden;
+    align-items: center;
+    margin: 20px 60px ;
+}
+#sarre .get{
+    background: crimson !important;
+    color: white !important;
+    box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+}
+/**salwar styles**/
+#salwar img{
+    width: 200px;
+    height: 200px;
+}
+#salwar h5{
+    font-weight: 700;
+}
+#salwar p{
+    font-weight: 700;
+}
+.card{
+    width: 200px;
+    border: none !important;
+    box-shadow:  15px 20px 20px rgba(0,0,0,.3),
+                 inset 4px 4px 10px white;
+    border-radius: 20px !important;
+    overflow: hidden;
+    align-items: center;
+    margin: 20px 60px ;
+}
+#salwar .get{
+    background: crimson !important;
+    color: white !important;
+    box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+    justify-content: center;
+}
+/** night wears     **/
+#night img{
+    width: 200px;
+    height: 200px;
+}
+#night h5{
+    font-weight: 700;
+}
+#night p{
+    font-weight: 700;
+}
+.card{
+    width: 200px;
+    border: none !important;
+    box-shadow:  15px 20px 20px rgba(0,0,0,.3),
+                 inset 4px 4px 10px white;
+    border-radius: 20px !important;
+    overflow: hidden;
+    align-items: center;
+    margin: 20px 60px ;
+}
+#night .get{
+    background: crimson !important;
+    color: white !important;
+    box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+    justify-content: center;
+}
+/**   kurts    **/
+#kurta img{
+    width: 200px;
+    height: 200px;
+}
+#kurta h5{
+    font-weight: 700;
+}
+#kurta p{
+    font-weight: 700;
+}
+.card{
+    width: 200px;
+    border: none !important;
+    box-shadow:  15px 20px 20px rgba(0,0,0,.3),
+                 inset 4px 4px 10px white;
+    border-radius: 20px !important;
+    overflow: hidden;
+    align-items: center;
+    margin: 20px 60px ;
+}
+#kurta .get{
+    background: crimson !important;
+    color: white !important;
+    box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+    justify-content: center;
+}
+/**westerns    **/
+#west img{
+    width: 200px;
+    height: 200px;
+}
+#west h5{
+    font-weight: 700;
+}
+#west p{
+    font-weight: 700;
+}
+.card{
+    width: 200px;
+    border: none !important;
+    box-shadow:  15px 20px 20px rgba(0,0,0,.3),
+                 inset 4px 4px 10px white;
+    border-radius: 20px !important;
+    overflow: hidden;
+    align-items: center;
+    margin: 20px 60px ;
+}
+#west .get{
+    background: crimson !important;
+    color: white !important;
+    box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+    justify-content: center;
+}
+/**party wear **/
+#party img{
+    width: 200px;
+    height: 200px;
+}
+#party h5{
+    font-weight: 700;
+}
+#party p{
+    font-weight: 700;
+}
+.card{
+    width: 200px;
+    border: none !important;
+    box-shadow:  15px 20px 20px rgba(0,0,0,.3),
+                 inset 4px 4px 10px white;
+    border-radius: 20px !important;
+    overflow: hidden;
+    align-items: center;
+    margin: 20px 60px ;
+}
+#party .get{
+    background: crimson !important;
+    color: white !important;
+    box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+    justify-content: center;
+}
+</style>
+<body> 
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">dressy.com</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+       aria-expanded="false" >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto"> 
+          <li class="nav-item">
+            <a class="nav-link active"  href="./index.html#home">Home</a></li>
+        <li class="nav-item">
+            <a class="nav-link active"  href="./index.html#services">Services</a></li>
+            <li class="nav-item">
+                <a class="nav-link active"  href="./index.html#contact">Contact</a></li>
+        <li class="nav-item">
+            <a class="nav-link active"  href="#sarre">Sarees</a></li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="#salwar">Salwars</a></li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="#night">Lounge wears</a></li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="#kurta">Kurtas</a></li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="#west">Westerns</a></li>
+          <li class="nav-item">
+            <a class="nav-link active"  href="#party">Party Wear</a></li>
+        </ul>
+        <button class="btn p-2 my-lg-0 my-2">Signin</button>
+        </div>
+    </div>
+  </nav> 
+    <div class="container-fluid">
+        <h1 class="text-center my-5" style="font-size: 50px;">Here We let you to explore our arrival from sarees!!!</h1>
+        <p class="text-center my-5" style="font-size: 40px; color: crimson;">Fresh as flowers,new dresses everyday...</p>
+    </div>
+    <!--sarre section-->
+   <section id="sarre">
+    <div class="container m-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <img src="./s1.webp" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title text-center my-5">Moonga Saree</h5>
+                      <p class="card-text text-center">CODE:SAS1R<br>Rs.12500</p>
+                      <a href="book.html" class="btn get ">Book now!!</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <img src="./s2.webp" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title text-center my-5">Chanderis</h5>
+                      <p class="card-text text-center">CODE:SAS34<br>Rs.6578</p>
+                      <a href="cbook.html" class="btn get">Book now!!</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <img src="./s3.webp" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title text-center my-5">Kalamkaris</h5>
+                      <p class="card-text text-center my-5">CODE:SA45G<br>Rs.7500</p>
+                      <a href="kbook.html" class="btn get">Book now!!</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <img src="./s4.jpg" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title text-center my-5">Printed Saree</h5>
+                      <p class="card-text text-center my-5">CODE:SA61D<br>Rs.5080</p>
+                      <a href="pbook.html" class="btn get">Book now!!</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <img src="./s5.jpg" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title text-center my-5">Tussar saree</h5>
+                      <p class="card-text text-center my-5">CODE:SADF5<br>Rs.8900</p>
+                      <a href="tbook.html" class="btn get">Book now!!</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <img src="./s6.webp" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title text-center my-5">Peacock Zari</h5>
+                      <p class="card-text text-center my-5">CODE:SANM3<br>Rs.9999</p>
+                      <a href="peacb.html" class="btn get">Book now!!</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <img src="./s7.webp" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title text-center my-5">Masslin Saree</h5>
+                      <p class="card-text text-center my-5">SA09K<br>Rs.5000</p>
+                      <a href="./sarees/masbook.html" class="btn get">Book now!!</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <img src="./s8.webp" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title text-center my-5">Cotton Saree</h5>
+                      <p class="card-text text-center my-5">CODE:SAX4C<br>Rs.4899</p>
+                      <a href="./sarees/cotbook.html" class="btn get">Book now!!</a>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-12">
+                <div class="card">
+                    <img src="./s9.jpeg" class="card-img-top">
+                    <div class="card-body">
+                      <h5 class="card-title text-center my-5">Kanchi Silk</h5>
+                      <p class="card-text text-center my-5">CODE:SA60M<br>Rs.10499</p>
+                      <a href="./sarees/kanbook.html" class="btn get">Book now!!</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+   </section>
+   <div class="container-fluid">
+    <h1 class="text-center my-5" style="font-size: 50px;">Here We let you to explore our arrival from Salwars!!!</h1>
+    <p class="text-center my-5" style="font-size: 40px; color: crimson;">Fresh as flowers,new dresses everyday...</p>
+</div>
+   <!--salwar section-->
+   <section id="salwar">
+    <div class="container m-5">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./salwarpics/sa1.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Embroidary Salwar Green</h5>
+                <p class="card-text text-center">CODE:SAL1R<br>Rs.2500</p>
+                <a href="./salwarpics/sa1.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="./salwarpics/sa2.webp" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title text-center my-5">Silk Cotton Salwar</h5>
+              <p class="card-text text-center">CODE:SAL2R<br>Rs.1200</p>
+              <a href="./salwarpics/sa2.html" class="btn get ">Book now!!</a>
+            </div>
+          </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-12">
+      <div class="card">
+          <img src="./salwarpics/sa3.jpeg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title text-center my-5">Red Cotton Salwar</h5>
+            <p class="card-text text-center">CODE:SAL3R<br>Rs.1500</p>
+            <a href="./salwarpics/sa3.html" class="btn get ">Book now!!</a>
+          </div>
+        </div>
+  </div>
+  <div class="col-lg-4 col-md-4 col-12">
+    <div class="card">
+        <img src="./salwarpics/sa4.webp" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title text-center my-5">Aari worked Salwar</h5>
+          <p class="card-text text-center">CODE:SAL4R<br>Rs.3400</p>
+          <a href="./salwarpics/sa4.html" class="btn get ">Book now!!</a>
+        </div>
+      </div>
+</div>
+<div class="col-lg-4 col-md-4 col-12">
+  <div class="card">
+      <img src="./salwarpics/sa5.jpg" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title text-center my-5">Pink Embroidary Salwar</h5>
+        <p class="card-text text-center">CODE:SAL5R<br>Rs.1700</p>
+        <a href="./salwarpics/sa5.html" class="btn get ">Book now!!</a>
+      </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-4 col-12">
+  <div class="card">
+      <img src="./salwarpics/sa6.jpg" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title text-center my-5">Punjabi style Red salwar</h5>
+        <p class="card-text text-center">CODE:SAL6R<br>Rs3100</p>
+        <a href="./salwarpics/sa6.html" class="btn get ">Book now!!</a>
+      </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-4 col-12">
+  <div class="card">
+      <img src="./salwarpics/sa7.webp" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title text-center my-5">Hand Embroidary Pink Salwar</h5>
+        <p class="card-text text-center">CODE:SAL7R<br>Rs.4500</p>
+        <a href="./salwarpics/sa7.html" class="btn get ">Book now!!</a>
+      </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-4 col-12">
+  <div class="card">
+      <img src="./salwarpics/sa8.webp" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title text-center my-5">Trendy Black Salwar</h5>
+        <p class="card-text text-center">CODE:SAL8R<br>Rs.4500</p>
+        <a href="./salwarpics/sa8.html" class="btn get ">Book now!!</a>
+      </div>
+    </div>
+</div>
+<div class="col-lg-4 col-md-4 col-12">
+  <div class="card">
+      <img src="./salwarpics/sa9.jpg" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title text-center my-5">Multi-color Salwar</h5>
+        <p class="card-text text-center">CODE:SAL9R<br>Rs.2500</p>
+        <a href="./salwarpics/sa9.html" class="btn get ">Book now!!</a>
+      </div>
+    </div>
+</div>
+    </div></div>
+   </section>
+   <div class="container-fluid">
+    <h1 class="text-center my-5" style="font-size: 50px;">Here We let you to explore our arrival from Night wears!!!</h1>
+    <p class="text-center my-5" style="font-size: 40px; color: crimson;">Fresh as flowers,new dresses everyday...</p>
+</div>
+<!--night wears-->
+  <section id="night">
+    <div class="container m-5">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./nightwear/n1.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Printed Red pants</h5>
+                <p class="card-text text-center">CODE:NIG0R<br>Rs.500</p>
+                <a href="./nightwear/n1.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./nightwear/n2.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Checked pants</h5>
+                <p class="card-text text-center">CODE:NIG1R<br>Rs.700</p>
+                <a href="./nightwear/n2.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./nightwear/n3.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Blue Designed Shirts</h5>
+                <p class="card-text text-center">CODE:NIG2R<br>Rs.900</p>
+                <a href="./nightwear/n3.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./nightwear/n4.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Star pattern-black</h5>
+                <p class="card-text text-center">CODE:NIG3R<br>Rs.800</p>
+                <a href="./nightwear/n4.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./nightwear/n5.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Mickey mouse designed</h5>
+                <p class="card-text text-center">CODE:NIG4R<br>Rs.600</p>
+                <a href="./nightwear/n5.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./nightwear/n6.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Pink crop Shirts</h5>
+                <p class="card-text text-center">CODE:NIG5R<br>Rs.950</p>
+                <a href="./nightwear/n6.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./nightwear/n7.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Plain grey</h5>
+                <p class="card-text text-center">CODE:NIG6R<br>Rs.650</p>
+                <a href="./nightwear/n7.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./nightwear/n8.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Violet checked</h5>
+                <p class="card-text text-center">CODE:NIG7R<br>Rs.500</p>
+                <a href="./nightwear/n8.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./nightwear/n9.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Blue checked</h5>
+                <p class="card-text text-center">CODE:NIG8R<br>Rs.550</p>
+                <a href="./nightwear/n9.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<div class="container-fluid">
+  <h1 class="text-center my-5" style="font-size: 50px;">Here We let you to explore our arrival from kurtas!!!</h1>
+  <p class="text-center my-5" style="font-size: 40px; color: crimson;">Fresh as flowers,new dresses everyday...</p>
+</div>
+<!--   kurtas    -->
+<section id="kurta">
+  <div class="container m-5">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="./kurtas/k1.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title text-center my-5">Blue Pattern</h5>
+              <p class="card-text text-center">CODE:KUR1R<br>Rs.1550</p>
+              <a href="./kurtas/k1.html" class="btn get ">Book now!!</a>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="./kurtas/k2.jpg" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title text-center my-5">Red solid Pattern</h5>
+              <p class="card-text text-center">CODE:KUR2R<br>Rs.1250</p>
+              <a href="./kurtas/k2.html" class="btn get ">Book now!!</a>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="./kurtas/k3.webp" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title text-center my-5">Grey flower Pattern</h5>
+              <p class="card-text text-center">CODE:KUR3R<br>Rs1200</p>
+              <a href="./kurtas/k3.html" class="btn get ">Book now!!</a>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="./kurtas/k4.webp" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title text-center my-5">Blue flower Pattern</h5>
+              <p class="card-text text-center">CODE:KUR4R<br>Rs1600</p>
+              <a href="./kurtas/k4.html" class="btn get ">Book now!!</a>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="./kurtas/k5.webp" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title text-center my-5">Brown Zig-Zig pattern</h5>
+              <p class="card-text text-center">CODE:KUR5R<br>Rs.999</p>
+              <a href="./kurtas/k5.html" class="btn get ">Book now!!</a>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="./kurtas/k6.webp" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title text-center my-5">Silky plain blue</h5>
+              <p class="card-text text-center">CODE:KUR6R<br>Rs.2700</p>
+              <a href="./kurtas/k6.html" class="btn get ">Book now!!</a>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="./kurtas/k7.webp" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title text-center my-5">silky flower Pattern</h5>
+              <p class="card-text text-center">CODE:KUR7R<br>Rs1200</p>
+              <a href="./kurtas/k7.html" class="btn get ">Book now!!</a>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="./kurtas/k8.webp" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title text-center my-5">Fancy blue</h5>
+              <p class="card-text text-center">CODE:KUR8R<br>Rs.3000</p>
+              <a href="./kurtas/k8.html" class="btn get ">Book now!!</a>
+            </div>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <img src="./kurtas/k9.webp" class="card-img-top">
+            <div class="card-body">
+              <h5 class="card-title text-center my-5">Plain grey</h5>
+              <p class="card-text text-center">CODE:KUR9R<br>Rs.1000</p>
+              <a href="./kurtas/k9.html" class="btn get ">Book now!!</a>
+            </div>
+          </div>
+      </div>
+      </div>
+      </div>
+</section>
+<div class="container-fluid">
+  <h1 class="text-center my-5" style="font-size: 50px;">Here We let you to explore our arrival from Westerns!!!</h1>
+  <p class="text-center my-5" style="font-size: 40px; color: crimson;">Fresh as flowers,new dresses everyday...</p>
+</div>
+<!--westerns     -->
+  <section id="west">
+    <div class="container m-5">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./westerns/w1.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Green Pattern</h5>
+                <p class="card-text text-center">CODE:WES1R<br>Rs.1500</p>
+                <a href="./westerns/w1.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./westerns/w2.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Black flower</h5>
+                <p class="card-text text-center">CODE:WES2R<br>Rs.2000</p>
+                <a href="./westerns/w2.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./westerns/w3.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Green Crop Top</h5>
+                <p class="card-text text-center">CODE:WES3R<br>Rs.900</p>
+                <a href="./westerns/w3.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./westerns/w4.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Solid Yellow</h5>
+                <p class="card-text text-center">CODE:WES4R<br>Rs.2300</p>
+                <a href="./westerns/w4.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./westerns/w5.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Pinkish top</h5>
+                <p class="card-text text-center">CODE:WES5R<br>Rs.1900</p>
+                <a href="./westerns/w5.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./westerns/w6.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Black Palazzo</h5>
+                <p class="card-text text-center">CODE:WES6R<br>Rs.2000</p>
+                <a href="./westerns/w6.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./westerns/w7.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Indo westerns</h5>
+                <p class="card-text text-center">CODE:WES7R<br>Rs.6600</p>
+                <a href="./westerns/w7.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./westerns/w8.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Black long checked</h5>
+                <p class="card-text text-center">CODE:WES8R<br>Rs.2000</p>
+                <a href="./westerns/w8.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./westerns/w9.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Red outfit</h5>
+                <p class="card-text text-center">CODE:WES9R<br>Rs.1600</p>
+                <a href="./westerns/w9.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        </div>
+        </div>
+  </section>
+  <div class="container-fluid">
+    <h1 class="text-center my-5" style="font-size: 50px;">Here We let you to explore our arrival from Party wears!!!</h1>
+    <p class="text-center my-5" style="font-size: 40px; color: crimson;">Fresh as flowers,new dresses everyday...</p>
+  </div>
+  <!--party wears-->
+  <section id="party">
+    <div class="container m-5">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./party/p1.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Ethnic black wear</h5>
+                <p class="card-text text-center">CODE:PAR1R<br>Rs.6500</p>
+                <a href="./party/p1.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./party/p2.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Ethnic Grey wear</h5>
+                <p class="card-text text-center">CODE:PAR2R<br>Rs.7500</p>
+                <a href="./party/p2.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./party/p3.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Plain Grey wear</h5>
+                <p class="card-text text-center">CODE:PAR3R<br>Rs.6000</p>
+                <a href="./party/p3.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./party/p4.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">White dotted</h5>
+                <p class="card-text text-center">CODE:PAR4R<br>Rs.7000</p>
+                <a href="./party/p4.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./party/p5.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Pink gown</h5>
+                <p class="card-text text-center">CODE:PAR5R<br>Rs.8000</p>
+                <a href="./party/p5.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./party/p6.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Pink black wear</h5>
+                <p class="card-text text-center">CODE:PAR6R<br>Rs.7600</p>
+                <a href="./party/p6.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./party/p7.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Rich red</h5>
+                <p class="card-text text-center">CODE:PAR7R<br>Rs.9500</p>
+                <a href="./party/p7.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./party/p8.jpg" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Ethnic baby pink</h5>
+                <p class="card-text text-center">CODE:PAR8R<br>Rs.6500</p>
+                <a href="./party/p8.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card">
+              <img src="./party/p9.webp" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title text-center my-5">Silk red wear</h5>
+                <p class="card-text text-center">CODE:PAR9R<br>Rs.5500</p>
+                <a href="./party/p9.html" class="btn get ">Book now!!</a>
+              </div>
+            </div>
+        </div>
+        </div></div>
+  </section>
+ </body>
+ </html>

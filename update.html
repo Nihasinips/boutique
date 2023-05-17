@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,200&family=Quicksand&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background-image: linear-gradient(to left top, #dc143c, #ee608e, #ec9ccd, #ebd1f2, #ffffff);
+        }
+
+        .container {
+            max-width: 700px;
+            width: 100%;
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 8px;
+        }
+
+        .container .title {
+            font-weight: 500;
+            font-size: 25px;
+            position: relative;
+        }
+
+        .container .title:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            background-image: linear-gradient(to left top, #dc143c, #ee608e, #ec9ccd, #ebd1f2, #ffffff);
+        }
+
+        .container form .user-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between
+        }
+
+        form .user-details .input-box {
+            margin: 20px 0 12px 0;
+            width: calc(100% / 2 - 20px);
+        }
+
+        .user-details .input-box .details {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .user-details .input-box input {
+            height: 45px;
+            width: 100%;
+            outline: none;
+            border-radius: 5px;
+            padding-left: 15px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            border-bottom-width: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .user-details .input-box .error input {
+            border-color: #ff3860;
+        }
+
+        .user-details .input-box .error {
+            color: #ff3860;
+            font-size: 9px;
+            height: 13px;
+        }
+
+        .user-details .input-box input:focus,
+        .user-details .input-box input:valid {
+            border-color: #9b59b6;
+        }
+
+        form .gender-details .gender-title {
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        form .gender-details .category {
+            width: 80%;
+            display: flex;
+            margin: 14px 0;
+            justify-content: space-between;
+        }
+
+        .gender-details .category label {
+            display: flex;
+        }
+
+        /*selectable round*/
+        .gender-details .category .dot {
+            height: 18px;
+            width: 18px;
+            background: #d9d9d9;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 5px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        #dot-1:checked~.category .one,
+        #dot-2:checked~.category .two,
+        #dot-3:checked~.category .three {
+            border-color: #d9d9d9;
+            background: #9b59b6;
+
+        }
+
+        form input[type=radio] {
+            display: none;
+
+        }
+
+        form .button {
+            height: 45px;
+            margin: 45px 0;
+        }
+
+        form .button input {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            color: #fff;
+            border: none;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            border-radius: 15px;
+            background-image: linear-gradient(to left top, #dc143c, #ee608e, #ec9ccd, #ebd1f2, #ffffff);
+        }
+
+        form .button input:hover {
+            background-image: linear-gradient(to left top, #dc143c, #ee608e, #ec9ccd, #ebd1f2, #ffffff);
+            box-shadow: 2px 10px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width:584px) {
+            .container {
+                max-width: 100%;
+            }
+
+            form .user-details .input-box {
+                margin-bottom: 15px;
+                width: 100%;
+            }
+
+            form .gender-details .category {
+                width: 100%;
+                display: flex;
+            }
+
+            .container form .user-details {
+                max-height: 300px;
+                overflow-y: scroll;
+            }
+
+            .user-details::-webkit-scrollbar {
+                width: 1px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">dressy...Updation!!</div>
+        <form action="http://localhost:5550" id="form" method="post" onsubmit="fun()">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" placeholder="Enter your email" id="emails" name="email" required>
+                    <div class="error"></div>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">New Password</span>
+                    <input type="password" placeholder="Enter password" id="pass" name="pass" required>
+                    <div class="error"></div>
+                </div>
+
+            </div>
+            
+            <div class="button">
+                <button type="submit" class="btn btn-danger">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+    <script>
+        function fun(){
+            alert("Registered Successfully!!")
+        }
+    </script>
+</body>
+
+</html>

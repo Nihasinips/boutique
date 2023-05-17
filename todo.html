@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DELL</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+
+body {
+    background-image: linear-gradient(to right top, #f6b2d8, #f2c7ea, #f1dbf6, #f5eefd, #ffffff);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#course-row {
+  font-size: 20px;
+  font-weight: bolder; 
+  margin-left: 2%;
+}
+
+#credit-row {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 10%;
+}
+
+#grade-row {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 10%;
+}
+
+.calculator-box {
+  width: 50%;
+  height: auto;
+  border: 2px solid #3D515C;
+  margin: 100px auto;
+/*  text-align: center; */
+}
+
+
+/* On screens that are 1200px or less, set the width to 75% */
+@media screen and (max-width: 1200px) {
+ .calculator-box {
+    width: 70%;
+  }
+}
+
+/* On screens that are 950px or less, set the width to 75% */
+@media screen and (max-width: 950px) {
+ .calculator-box {
+    width: 75%;
+  }
+}
+
+/* On screens that are 600px or less, set the width to 90% */
+@media screen and (max-width: 600px) {
+ .calculator-box {
+    width: 90%;
+  }
+}
+
+
+h1 {
+  padding: 15px;
+  font-size: 40px;
+  text-align: center;
+  border: 1px solid #dda3dd;
+  background-color: #ffc0cb;
+}
+
+h1:hover {
+  padding: 15px;
+  font-size: 40px;
+  text-align: center;
+  border: 1px solid #3D515C;
+  background-color: #c0c0c0;
+  color: #000;
+}
+
+p{
+  padding: 20px;
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+}
+
+#course-wrapper, form {
+  color: black;
+  padding-left: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+input{
+  border: none;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+  width: 20%;
+  text-align: center;
+}
+select{
+  padding: 15px;
+  border: none;
+  border-radius: 7.5px;
+  width: 25%;
+/*   height: 30px; */
+}
+ button {
+  width: 23%;
+  height: 45px;
+  padding: 10px;
+  margin: 5px auto;
+/*   margin-left: 10px; */
+  border-width: 3px;
+  border-radius: 10%;
+  border-style: solid;
+}
+
+ button:hover {
+  width: 23%;
+  height: 45px;
+  padding: 10px;
+  margin: 5px auto;
+  border-width: 4px;
+  border-radius: 12%;
+  border-style: solid;
+  color: #fff;
+  background: #000;
+  border-color: #c0c0c0;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  display: inline-block;
+  margin: 5px auto;
+  text-align: center;
+}
+.lastp {
+  border: 1px solid #be80bd;
+  background-color: #ffc0cb;
+}
+.lastp p {
+  color: rgb(5, 5, 5);
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bolder;
+} 
+
+.lastp p:hover {
+  background-color: #ccc;
+  color: #000;
+} 
+
+   </style>
+</head>
+<body>
+    <div class="calculator-box">
+       <h1 style="color:white;"> <font size="5">TOTAL AMOUNT</font></h1>
+
+       <p style="color:black;">
+<font size="5">
+          Calculate your package..!!!
+        </p></font>
+
+        <div id="course-wrapper">
+          <form class="key-0">
+            <p> <label id="course-row" for="courses">  S.No</label> 
+                <label id="grade-row" for="grade">Categories</label>
+             <label id="credit-row" for="credit-units">No.of days</label>
+           </p>
+              <input
+                type="Number"
+                placeholder="S.No"
+                class="courses key-0"
+                required/>
+
+              <select class="grade key-0" required>
+                <option class="grade" value="select">Select</option>
+                <option class="grade" value="5">Basic Package</option>
+                <option class="grade" value="4">Premium Package</option>
+                <option class="grade" value="3">Ultimate Package</option>
+                <option class="grade" value="2">Pilates and yoga</option>
+                <option class="grade" value="1">Zumbaa class</option>
+                
+              </select>
+
+              <input
+                type="number"
+                class="credit-units key-0"
+                placeholder="Count"
+                value=""
+                required
+              />
+
+          </form>
+        </div>
+        <!-- <section class"btn">+ Add Course</section> -->
+        <div class="btn">
+          <button onclick="addCourse()">+ Add Event</button>
+          <button onclick="removeCourse()">- Remove Event</button>
+          <button onclick="calcCgpa()">Calculate TOTAL</button>
+        </div>
+        <div class="lastp">
+          <p id="cgpa-calc"><center><h2 style="color:white;"></center></p></h2>
+        </div>
+      </div>
+     <script>
+        function gradeCalc(grade, unit) {
+            console.log(grade === "Basic Package");
+  if (grade === "Basic Package") {
+    return 2000*unit;
+  } else if (grade === "Premium Package") {
+    return 4000*unit;
+  } else if (grade === "Ultimate Package") {
+    return 6000*unit;
+  } else if (grade === "Pilates and yoga") {
+    return 8500*unit;
+  } else if (grade === "Zumbaa class") {
+    return 10000*unit;
+  } 
+  else{
+    return 0;
+  }
+    
+   
+}
+
+let counter = 1;
+
+function addCourse() {
+  let addNew = document.createElement("form");
+  addNew.classList.add("add_new", `key-${counter}`);
+  const course_name = `
+  <form class="add_new key-${counter}">
+    <input type="number" placeholder="S.No" class="courses key-${counter}" required>
+    <select class="grade key-${counter}" required>
+      <option value="select">Select</option>
+      <option value="5">Basic Package</option>
+      <option value="4">Premium Package</option>
+      <option value="3">Ultimate Package</option>
+      <option value="2">Pilates and yoga</option>
+      <option value="1">Zumbaa class</option>
+      
+    </select>  
+    <input type="number" placeholder="Count" class="credit-units key-${counter}" required>
+
+  </form>
+  `;
+  addNew.innerHTML = course_name;
+  document.getElementById("course-wrapper").appendChild(addNew);
+  counter++;
+}
+
+function removeCourse() {
+  let mainForm = document.querySelector("form.add_new");
+  mainForm.remove();
+}
+
+const reports = [];
+
+/**
+ * @description calculates cgpa
+ */
+function calcCgpa() {
+  const CGPAPARAGRAPH = document.getElementById("cgpa-calc");
+  const GRADESSELECT = document.querySelectorAll("select.grade");
+  const UNIT = document.querySelectorAll("input.credit-units");
+
+  const courseReport = {};
+
+  const listOfGrades = [];
+  const listOfUnits = [];
+  let totalUnits = 0;
+
+  GRADESSELECT.forEach((e) => {
+    let GRADES = e.options;
+    const selectedIndex = e.selectedIndex;
+    const selectedGrade = GRADES[selectedIndex];
+    const gradeValue = selectedGrade.text;
+    listOfGrades.push(gradeValue);
+  });
+  //console.log(listOfGrades);
+
+  UNIT.forEach((e) => {
+    const unitValue = parseInt(e.value);
+    totalUnits += unitValue;
+    listOfUnits.push(unitValue);
+  });
+  //console.log(listOfUnits);
+
+  let totalEarnedUnits = 0;
+
+  for (let i = 0; i < listOfUnits.length; i++) {
+    console.log(listOfGrades[i], listOfUnits[i]);
+    totalEarnedUnits += gradeCalc(listOfGrades[i], listOfUnits[i]);
+  }
+  const gpa = totalEarnedUnits;// totalUnits;
+  //console.log(totalEarnedUnits);
+  
+  if (gpa >= 0){
+    CGPAPARAGRAPH.textContent = "Total amount spended " + gpa.toFixed(2);   
+  } else {
+    CGPAPARAGRAPH.textContent = "Please select your Event Name and Count units";    
+  }
+  
+}
+
+    </script>
+</body>
+</html>

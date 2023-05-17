@@ -1,0 +1,243 @@
+<html>
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<style>
+   div {
+     margin-bottom: 10px;
+   }
+   input {
+     display: inline-block;
+     width: 150px;
+     text-align: center;
+   }
+ </style>
+</head>
+<body>
+   <form>
+<div class="container">
+<div class='col-md-10'><center>
+<h2>Event Booking Order Form</h2></center>
+<hr>
+<h4>EVENT INFORMATION</h4>
+</div>
+</div>
+<br>
+<div class="container">
+   <div class='col-md-5'>
+         <div class='input-group date' id='datetimepicker6'>
+            <b>Event Name</b>&emsp;<input type="text" class="form-control" id="ename">
+</div><br>
+</div>
+</div>
+<div class="container">
+   <div class='col-md-5'>
+         <div class='input-group date' id='datetimepicker6'>
+            <b>Event Theme</b>&emsp;<input type="text" class="form-control" id="etheme">
+</div><br>
+</div>
+</div>
+<div class="container">
+   <div class='col-md-5'>
+<b>Event Date&Time</b>
+    <input type="date">&emsp;<input type='time' id="dt">
+</div>
+</div>
+<br>
+<div class="container">
+   <div class='col-md-8'>
+         <div class='input-group date' id='datetimepicker6'>
+            <b>Event Location</b>&emsp;<input type="text" class="form-control" placeholder="street address" id="eloc">
+</div>
+</div>
+</div>
+<div class="container">
+   <div class='col-md-8'>
+<div class='input-group date' id='datetimepicker6'>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" class="form-control" placeholder="street address line-2" required>
+</div>
+</div>
+</div>
+<br>
+<div class="container">
+   <div class='col-md-8'>
+         <div class='input-group date' id='datetimepicker6'>
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" class="form-control" placeholder="City">&emsp;&emsp;<input type="text" placeholder="State/Province" class="form-control" required>
+</div>
+</div>
+</div>
+<br>
+<div class="container">
+   <div class='col-md-5'>
+<div class='input-group date' id='datetimepicker6'>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<input type="text" class="form-control" placeholder="Postal/zip Code" id="zc" pattern="[0-9]{6}">
+</div>
+</div>
+</div>
+<br>
+<div class="container">
+   <div class='col-md-5'>
+<b>Arrival Time</b>
+    &emsp;&emsp;<input type='time' required>
+</div>
+</div>
+<br>
+<div class="container">
+   <div class='col-md-5'>
+<b>Food serving time</b>&emsp;&emsp;<input type='time' required>
+
+</div>
+</div>
+<br>
+<div class="container">
+   <div class='col-md-3'>
+         <div class='input-group date' id='datetimepicker6'>
+            <b>Estimated No of Guests</b>&emsp;<input type="number" class="form-control" required>
+</div><br>
+</div>
+</div>
+
+
+<div class="container">
+   <div class='col-md-8'>
+         <div class='input-group date' id='datetimepicker6'>
+<b>Event Contact Person</b>
+&emsp;&emsp;<input type="text" class="form-control" placeholder="FirstName" id="ecname" pattern="[a-zA-Z]{3,}">&emsp;&emsp;
+<input type="text" placeholder="LastName" class="form-control" id="ecname" pattern="[a-zA-Z]{3,}">
+</div>
+</div>
+</div>
+
+<br>
+<div class="container">
+   <div class='col-md-5'>
+         <div class='input-group date' id='datetimepicker6'>
+            <b>E-mail</b>&emsp;<input type="text" class="form-control" id="mail">
+</div><br>
+</div>
+</div>
+
+
+<div class="container">
+   <div class='col-md-7'>
+         <div class='input-group date' id='datetimepicker6'>
+<b>Contact Person Ph.no</b>
+&emsp;&emsp;<input type="text" class="form-control" placeholder="Areacode" value="+91" disabled>&emsp;&emsp;
+<input type="tel" placeholder="Phonenumber" class="form-control" id="pno" pattern="[0-9]{10}">
+<hr>
+</div>
+</div>
+</div><br>
+<div class="container">
+<div class='col-md-10'>
+<hr>
+<h4>Payment INFORMATION</h4>
+</div>
+</div>
+
+<div class="container">
+   <div class='col-md-5'>
+         <div class='input-group date' id='datetimepicker6'>
+            <b>Total amount</b>&emsp;<input type="text" class="form-control"placeholder="$0.00" id="tm" onkeyup="success()">
+</div><br>
+</div>
+</div>
+
+
+<div class="container">
+   <div class='col-md-5'>
+         <div class='input-group date' id='datetimepicker6'>
+<b>Payment Method</b>&emsp;
+<select class="form-select" aria-label="Default select example" id="pm" required disabled>
+  <option selected>Select Payment</option>
+  <option value="1">Cash</option>
+  <option value="2">Credit Card</option>
+  <option value="3">Purchase Order</option>
+</select>
+</div><br>
+</div>
+</div>
+
+<div class="container">
+   <div class='col-md-5'>
+         <div class='input-group date' id='datetimepicker6'>
+<b>Client Signature</b>&emsp;
+<input type="file" accept=".pdf" required>
+</div><br>
+</div>
+</div>
+
+<div class="container">
+   <div class='col-md-5'>
+<b>Date Signed</b>
+    <input type="date" required>&emsp;
+</div>
+</div>
+
+
+<div class="container">
+<div class="form-check">
+ 
+
+</div>
+<br>
+<input class="btn btn-secondary" type="submit" value="Submit" onclick="fun()">
+<input class="btn btn-secondary" type="reset" value="Reset" width="20px">
+</div>
+</div>
+</div>
+</form>
+<script>
+   function fun(){
+      var ename=document.forms[0]["ename"].value;
+      var etheme=document.forms[0]["etheme"].value;
+      var dt=document.forms[0]["dt"].value;
+      var eloc=document.forms[0]["eloc"].value;
+      var ecname=document.forms[0]["ecname"].value;
+      var pno=document.forms[0]["pno"].value;
+      var mail=document.forms[0]["mail"].value;
+      if(ename==""){
+         alert("Please fill out event name");
+         return false;
+      }
+      if(etheme==""){
+         alert("Please fill out event theme");
+         return false;
+      }
+      if(dt==""){
+         alert("Please fill out event date and time");
+         return false;
+      }
+      if(eloc==""){
+         alert("Please fill out event location");
+         return false;
+      }
+      if(ecname==""){
+         alert("Please fill out contacter name");
+         return false;
+      }
+      if(pno==""){
+         alert("Please fill out phone number");
+         return false;
+      }
+      if (!mail.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+ alert("Enter the valid Email");
+ return false;
+ }
+ if(mail==""){
+         alert("Please fill out mail id");
+         return false;
+      }
+      alert("Thank you for reaching us!!Your event has been booked succesfully☺")
+   }
+   function success() {
+   if(document.getElementById("tm").value==="") { 
+            document.getElementById('pm').disabled = true; 
+        } else { 
+            document.getElementById('pm').disabled = false;
+        }
+    }
+</script>
+</body>
+</html>

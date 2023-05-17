@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+	function calculate() {
+		const dressName = document.getElementById("dressName").value;
+		const dressPrice = document.getElementById("dressPrice").value;
+		const discount = document.getElementById("discount").value;
+		const quantity=document.getElementById('dressQty').value;
+	  
+		const resultDressName = document.getElementById("resultDressName");
+		const resultDressPrice = document.getElementById("resultDressPrice");
+		const resultDiscount = document.getElementById("resultDiscount");
+		const resultTotal = document.getElementById("resultTotal");
+	  
+		resultDressName.innerText = dressName;
+		resultDressPrice.innerText = dressPrice;
+		resultDiscount.innerText = discount;
+		//resultQuantity.innerText = quantity;
+		resultTotal.innerText = calculateTotal(dressPrice, discount,quantity);
+	  
+		document.querySelector(".result").style.display = "block";
+	  }
+	  
+	  function calculateTotal(dressPrice, discount, quantity) {
+		const totalAmount = (dressPrice - (dressPrice * discount / 100))*quantity;
+		return totalAmount.toFixed(2);
+	  }
+	  
+		  </script>
+	<style>
+		 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,200&family=Quicksand&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins',sans-serif;
+    }
+    body{
+		display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+		
+	}
+	.container{
+		max-width: 700px;
+		width: 100%;
+		background: #fff;
+		padding: 25px 30px;
+		border-radius: 8px;
+		background-image: url(./b1db.jpg);
+
+	}
+	.container .title{
+		font-weight: bold;
+		font-size: 25px;
+		position: relative;
+		color: crimson;
+	}
+	.container .title:before{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		height: 3px;
+		width: 30px;
+	}
+	.container form .user-details{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	form .user-details .input-box{
+        margin: 20px 0 12px 0;
+        width: calc(100% / 2 - 20px);
+    }
+	.user-details .input-box .details{
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+	.user-details .input-box input{
+        height: 45px;
+        width: 100%;
+        outline: none;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid  #ccc;
+        font-size: 16px;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+    }
+	.user-details .input-box input:focus,  
+     .user-details .input-box input:valid{
+        border-color: crimson; 
+    }
+	.container .user-details .btn{
+		color: crimson;
+		border-radius: 15px;
+	}
+	.container .user-details .btn{
+		height: 50px;
+        margin: 100px 0;
+	}
+	.container .user-details .btn input{
+		height: 100%;
+        width: 100%;
+        outline: none;
+        color: #fff;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        border-radius: 15px;
+
+	}
+	.result h3{
+		color:crimson;
+	}
+
+	.result hr{
+		color: crimson;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="title">Dress Bill Calculator!!</div>
+		<form>
+			<div class="user-details">
+			 <div class="input-box">
+				<label for="dressName">Dress Name</label>
+				<input type="text" class="form-control" id="dressName" value="Peacock Zari">
+			  </div>
+			  <div class="input-box">
+				<label for="dressPrice">Dress Price</label>
+				<input type="number" class="form-control" id="dressPrice" value="9999">
+			  </div>
+			  <div class="input-box">
+				<label for="dressCode">Dress Code</label>
+				<input type="text" class="form-control" id="dressCode" value="SANM3">
+			  </div>
+			  <div class="input-box">
+				<label for="dressQty">Quantity</label>
+				<input type="number" min="1" max="500" class="form-control" id="dressQty">
+			  </div>
+			  <div class="input-box">
+				<label for="discount">Discount</label>
+				<input type="text" class="form-control" id="discount" value="5">
+			  </div>
+			  <div class="button">
+			  <button type="button"  class="btn btn-primary"
+			  onclick="calculate()" >Calculate Total</button>
+			  </div>
+			</div>
+			</form>
+			<div class="result" style="display: none;">
+			  <hr>
+			  <h3>Bill Summary</h3>
+			  <p><strong>Dress Name:</strong> <span id="resultDressName"></span></p>
+			  <p><strong>Dress Price:</strong> $<span id="resultDressPrice"></span></p>
+			  <p><strong>Discount:</strong> <span id="resultDiscount"></span>%</p>
+			  <p><strong>Total Amount:</strong> $<span id="resultTotal"></span></p>
+			  <br>
+              <hr>
+              <center>You can now place the order by contacting us!!!</center>
+              <br>
+              <center>For order Sarees contact:9442647283</center>
+			  <br>
+			  <center><a href="valid.html"><input type="button" value="Place" style="color:crimson;border-color: black;border-radius: 20px;width: 100px;height: 50px;font-size: large;"></a><center></center>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

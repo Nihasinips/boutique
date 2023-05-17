@@ -1,0 +1,100 @@
+<html>
+<head>
+<title>Application form</title>
+</head>
+<h1><center> SHE FITNESS APPLICATION FORM</FORM></center></h1>
+<body bgcolor="pink"></body>
+<h2>PART 1:BASIC INFORMATION</h2><br>
+<form action="http://localhost:5500" id="form" method="post" onsubmit="fun()">
+<div>
+    <label for="fname" >First Name:</label>
+    <input type="text" id="fname" name="fname" placeholder="Enter First Name" required><br><br>
+    <label for="lname" >Last Name:</label>
+    <input type="text" id="lname" name="lname"  placeholder="Enter Last Name" required><br><br>
+    <label for="email" >E-mail:</label>
+    <input type="email" id="email" name="email"  placeholder="Enter your mail" required><br><br>
+    <label for="mob" >Mobile number:</label>
+    <input type="tel" id="mob" name="mob"  placeholder="Enter your phone number" pattern="[0-9]{10}" required><br><br>
+    <label for="age"   >Age:</label>
+    <input type="text" id="age"   name="age"       placeholder="Enter Your Age" required><br><br>
+    <label for="Heigh" >Height:</label>
+    <input type="text" id="height" name="height"   placeholder="Enter your height" required><br><br>
+    <label for="weight" >Weight:</label>
+    <input type="text" id="weight" name="weight"   placeholder="Enter Your Weight" required><br><br>
+
+
+<label for="gender">GENDER</label><br>
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="Male" required><br>
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="Female" required><br>
+        <label for="other">Rather than</label>
+        <input type="radio" id="male" name="gender" value="Male" required><br>
+
+<h2> PART 2:LIFESTYLE INFORMATION</h2>
+<div>
+    <label for="wdufl" >What do you do for a living?</label>
+    <input type="text" id="live" name="live" required><br><br>
+
+    <label for="act">Whats the activity level at you job?</label><br>
+    <label for="none">None(Seats only)</label>
+    <input type="radio" id="n" name="act" value="none" required>
+    <label for="mod">Moderate(light activity such as walking)</label>
+    <input type="radio" name="act" id="ma" value="mod" required><br>
+    <label for="high">High(heavy labor,very active)</label>
+    <input type="radio" name="act" id="h" value="high" required><br><br>
+
+    <label for="text" >Do you follow a regular working schedule, do you work,afternoon or night?</label>
+    <input type="text" id="follow" name="follow" required><br><br>
+
+    <label for="trav">How often do you travel?</label><br>
+    <label for="rare">Rarely</label>
+    <input type="radio" name="trav" id="r" value="rarely"><br>
+    <label for="fy">A few times a year</label>
+     <input type="radio" name="trav" id="fa" value="fy"><br>
+     <label for="fm">A few times a month</label>
+    <input type="radio" name="trav" id="fb" value="fm"><br>
+    <label for="week">Weekly</label>
+    <input type="radio" name="trav" id="w" value="week"><br><br>
+
+    <label for="text">If you are on any medications Please list them.</label>
+    <input type="text" id="medi" name="medi" required><br><br>
+
+    <h2> PART 3:GOALS</h2>
+    <div>
+        <label for="text" >What is you goal with your training?</label>
+        <input type="text" id="train" name="train" required><br><br>
+        <label for="text" >Why?</label>
+        <input type="text" id="time" name="time" required><br><br>
+        <label for="goal">Timeline for achieving your goal?</label><br><br>
+        <label for="eight">8 Weeks</label>
+        <input type="radio" name="goal" id="goal" value="8weeks" required><br>
+        <label for="six">16 Weeks</label>
+        <input type="radio" name="goal" id="goal" value="16weeks" required><br>
+        <label for="two">24 Weeks</label>
+        <input type="radio" name="goal" id="goal" value="24weeks" required><br>
+        <label for="three">32 Weeks</label>
+        <input type="radio" name="goal" id="goal" value="32weeks" required><br>
+        <label for="four">40 Weeks</label>
+        <input type="radio" name="goal" id="goal" value="40weeks" required><br>
+        <label for="one">1 Year</label>
+        <input type="radio" name="goal" id="goal" value="1year" required><br>
+        <label for="text" >How often do you want to do Personal Training a week?</label>
+        <input type="text" id="pers" name="pers"><br><br>
+        <label for="text" >What are your expextations on me as your Personal trainer?</label>
+        <input type="text" id="me" name="me"><br><br>
+       <center><div class="button">
+            <input type="submit" value="submit"> 
+        </div></center>
+        
+
+    </div>
+</div>
+</form>
+<script>
+  function fun(){
+    alert("Your records have been registered");
+  }
+</script>
+</body>
+</html>
